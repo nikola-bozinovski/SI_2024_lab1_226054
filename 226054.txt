@@ -1,0 +1,44 @@
+mkdir SI_2024_lab1_226054
+cd SI_*
+git init
+git remote add origin https://github.com/nikola-bozinovski/SI_2024_lab1_226054.git
+git add .
+git commit -m "Initial commit"
+git add .
+git commit -m "Add starter code"
+git push origin master
+git branch bug1
+git branch bug2
+git branch
+git checkout bug1
+git add .
+git commit -m "Fix wrong condition in filterOddLengthStrings"
+git checkout bug2
+git add .
+git commit -m "Fix wrong condition in makeBigStringFrom"
+git checkout bug1
+git add .
+git commit -m "Call method filterOddLengthStrings in main class"
+git checkout bug2
+git add .
+git commit -m "Call method makeBigStringFrom in main class"
+git checkout master
+git push --all origin
+git merge bug1
+	PS. Fast-forward i nema problemi
+git push --all origin
+git checkout bug2
+git rebase master
+	PS. Se javuva konflikt
+git status
+git add .
+git rebase --continue
+git checkout master
+git merge bug2
+	PS. Fast-forward poradi rebase
+git push --all origin
+	PS. Se javuva problem
+git push --force origin bug2
+git push --all
+
+
